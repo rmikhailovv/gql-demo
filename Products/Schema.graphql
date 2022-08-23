@@ -1,3 +1,4 @@
 extend type Product {
     reviews: [Review] @delegate(schema: "reviews", path: "productReviews(productId: $fields:id)")
+    averageRate: Decimal @delegate(schema: "reviews", path: "productAverageRate(productId: $fields:id)")
 }

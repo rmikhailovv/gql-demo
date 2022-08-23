@@ -22,4 +22,10 @@ public class Query
         .Select(x => x.Value)
         .Where(x => x.ProductId == productId)
         .AsQueryable();
+
+    public decimal ProductAverageRate(Guid productId)
+    {
+        var reviews = reviewsStates.Select(x => x.Value).Where(x => x.ProductId == productId).ToArray();
+        return Math.Round((decimal)(reviews.Sum(x => x.Rate) / reviews.Length), 2);
+    }
 }
