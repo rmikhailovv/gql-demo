@@ -1,4 +1,3 @@
-using HotChocolate.AspNetCore;
 using Products.Domain;
 using Products.GraphQl;
 
