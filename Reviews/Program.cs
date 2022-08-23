@@ -1,6 +1,5 @@
 using Reviews.Domain;
 using Reviews.GraphQl;
-using Reviews.GraphQl.Loaders;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
@@ -17,7 +16,6 @@ services
     .AddSorting()
     .AddQueryType<Query>()
     .AddMutationType<ReviewsAggregate>()
-    .AddDataLoader<ProductsReviewsDataLoader>()
     .PublishSchemaDefinition(c => c.SetName("reviews"));
 
 var app = builder.Build();

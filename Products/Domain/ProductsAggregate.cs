@@ -18,13 +18,15 @@ public class ProductsAggregate
 
     public void UpdateProduct(UpdateProductCommand command)
     {
-        if (!productsStates.TryGetValue(command.Id, out var product)) throw new InvalidOperationException($"Product {command.Id} not found");
+        if (!productsStates.TryGetValue(command.Id, out var product))
+            throw new InvalidOperationException($"Product {command.Id} not found");
         product.Name = command.Name;
     }
 
     public void DeleteProduct(Guid id)
     {
-        if (!productsStates.TryGetValue(id, out var product)) throw new InvalidOperationException($"Product {id} not found");
+        if (!productsStates.TryGetValue(id, out var product))
+            throw new InvalidOperationException($"Product {id} not found");
         productsStates.Remove(id);
     }
 }
