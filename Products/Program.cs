@@ -15,7 +15,8 @@ services
     .AddFiltering()
     .AddSorting()
     .AddQueryType<Query>()
-    .AddMutationType<ProductsAggregate>();
+    .AddMutationType<ProductsAggregate>()
+    .PublishSchemaDefinition(c => c.SetName("products"));
 
 var app = builder.Build();
 

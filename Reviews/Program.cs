@@ -14,7 +14,8 @@ services
     .AddFiltering()
     .AddSorting()
     .AddQueryType<Query>()
-    .AddMutationType<ReviewsAggregate>();
+    .AddMutationType<ReviewsAggregate>()
+    .PublishSchemaDefinition(c => c.SetName("reviews"));
 
 var app = builder.Build();
 
