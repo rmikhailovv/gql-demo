@@ -1,0 +1,12 @@
+<Project>
+    <ItemGroup>
+        <PackageReference Include="HotChocolate" Version="12.0.1" />
+        <PackageReference Include="HotChocolate.AspNetCore" Version="12.0.1" />
+        <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.0.1" />
+        <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="10.5.5" />
+        <PackageReference Include="HotChocolate.Stitching" Version="12.0.1" />
+        <PackageReference Include="HotChocolate.Types" Version="12.0.1" />
+        <PackageReference Include="HotChocolate.Data" Version="12.0.1" />
+        <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
+    </ItemGroup>
+</Project>
