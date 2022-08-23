@@ -16,7 +16,9 @@ services
     .AddSorting()
     .AddQueryType<Query>()
     .AddMutationType<ProductsAggregate>()
-    .PublishSchemaDefinition(c => c.SetName("products"));
+    .PublishSchemaDefinition(c => c
+        .SetName("products")
+        .AddTypeExtensionsFromFile("Schema.graphql"));
 
 var app = builder.Build();
 
