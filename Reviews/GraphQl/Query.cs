@@ -1,18 +1,15 @@
 using HotChocolate.Data;
 using Reviews.Domain;
-using Reviews.GraphQl.Loaders;
 
 namespace Reviews.GraphQl;
 
 public class Query
 {
     private readonly Dictionary<Guid, Review> reviewsStates;
-    private readonly ProductsReviewsDataLoader productsReviewsDataLoader;
 
-    public Query(Dictionary<Guid, Review> reviewsStates, ProductsReviewsDataLoader productsReviewsDataLoader)
+    public Query(Dictionary<Guid, Review> reviewsStates)
     {
         this.reviewsStates = reviewsStates;
-        this.productsReviewsDataLoader = productsReviewsDataLoader;
     }
 
     [UseFiltering]
